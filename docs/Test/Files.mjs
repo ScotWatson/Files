@@ -21,7 +21,7 @@ export function createBlobChunkSource(args) {
     ret.outputByteRate = args.outputByteRate;
     return ret;
   })();
-  const blobChunk = new AsyncSource();
+  const blobChunk = new StreamOps.AsyncSource();
   blobChunk.init = async function () {
     try {
       return {
